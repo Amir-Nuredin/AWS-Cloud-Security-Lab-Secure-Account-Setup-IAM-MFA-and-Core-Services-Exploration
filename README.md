@@ -1,4 +1,4 @@
-# AWS Cloud Security Lab Secure Account Setup, IAM MFA, and Core Services Exploration
+# AWS Cloud Security Lab: Secure Account Setup, IAM MFA, and Core Services Exploration
 
 ## Objective
 
@@ -60,7 +60,45 @@ IM6: Creating an Alert for the Budget
 
 IM7: Confirming that the Budget was Created
 
+### Part 3: Securing Root Account with MFA
 
+The next part in configuring my AWS account was securing the root account with Multi-Factor Authentication. This is important because it adds an extra layer of security to my account whenever I log in. To configure this, I clicked my account name in the top right and selected "Security Credentials." I then scrolled down until I saw MFA. I saw that it hadn't been assigned yet (IM8). I then went through the process of configuring MFA. For the type of authentication, I chose the Authenticator app and set that up (IM9). I then went on my phone and typed in the code twice to confirm authentication, and it worked. I then went back to the Security Credentials page and confirmed that MFA was set up (IM10).
+
+<img width="1599" height="586" alt="Screenshot 2026-06-01 095228" src="https://github.com/user-attachments/assets/fe5e5517-0b57-498e-b1b8-42a08fe79f6b" />
+
+IM8: Security Credentials Page with MFA not yet configured
+
+<img width="700" height="575" alt="Screenshot 2026-06-01 095446" src="https://github.com/user-attachments/assets/08b16746-5283-44c6-922a-936848161295" />
+
+IM9: Setting up Authenticator App for MFA
+
+<img width="1570" height="157" alt="Screenshot 2026-06-01 095532" src="https://github.com/user-attachments/assets/a235988e-a080-49e7-91b9-19f3a4e5d516" />
+
+IM10: MFA Configured for Root Account
+
+### Part 4: Creating IAM Admin User
+
+Although I was currently logged in as the Root account, it is typically not advised to use the root account as it has complete control over all configurations without being able to be restricted. However, if I create an admin account, it will still have all the administrative access the Root account does, but is able to be restricted and monitored like any other user account. Essentially, the Admin account will be used for day-to-day admin tasks, and the root account will be used to deal with billing and other tasks like that. Here is how I created the admin user.
+
+1. **CREATING ADMIN USER.** To create the admin user, I first went to the search bar and typed "IAM" and clicked on it. I currently have no users created, so I clicked "Create User" in the top right (IM11). I then filled out the information for the user, like the username (Admin-User), giving the user access to the AWS Management Console, and setting a secure password for the user (IM12).
+2. **SETTING PERMISSIONS.** Next up was setting permissions for the admin user. I chose the option "Attach policies directly," which means that those permissions will apply directly to that user. I then chose the permission policy "AdministratorAccess," which gave the admin user typical administrator privileges like the root account.
+3. **CONFIRMING ACCOUNT AND SAVING LOGIN-INFO.** After configuring everything, I created the user. I then needed to save the login information because, from now on, unless I was logging in as the Root account, I needed a separate link to log in as the Admin-User account. I securely saved the login info so I could log in to the admin account whenever (IM14).
+
+<img width="1916" height="367" alt="Screenshot 2026-06-01 095715" src="https://github.com/user-attachments/assets/d9093e9e-64fb-4135-b0a3-668d2ac061ac" />
+
+IM11: IAM Users with no current users
+
+<img width="1344" height="681" alt="image" src="https://github.com/user-attachments/assets/607a8fa6-978f-45dd-a57e-b52cb86dff58" />
+
+IM12: Configuring Admin-User Account
+
+<img width="891" height="389" alt="Screenshot 2026-06-01 095901" src="https://github.com/user-attachments/assets/6b133c05-c622-4fbc-8f09-d24c8c5e0dc9" />
+
+IM13: Configuring Permissions for Admin Account
+
+<img width="1335" height="245" alt="Screenshot 2026-06-01 100101" src="https://github.com/user-attachments/assets/d46a88c7-3780-40df-88db-09eaea3ae035" />
+
+IM14: Login-Info for Admin User Account
 
 
 
