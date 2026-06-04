@@ -100,8 +100,25 @@ IM13: Configuring Permissions for Admin Account
 
 IM14: Login-Info for Admin User Account
 
+### Part 5: Logging In as IAM Admin User
 
+Now that I created the admin user, I wanted to confirm that the account was working, and I could login as the admin user instead of the Root account. To do this, I simply logged out of the Root account, used the link for the admin account I saved, and then entered my credentials for the admin user (IM15). When I logged in, I could see the admin account username at the top right with the AWS Management Console open, confirming that the admin user account was configured correctly (IM16). 
 
+<img width="1289" height="472" alt="image" src="https://github.com/user-attachments/assets/62fe08a9-c23a-45b5-9ccc-06aa555aaa34" />
+
+IM15: Logging in to Admin User Account Instead of Root Account
+
+<img width="1602" height="855" alt="image" src="https://github.com/user-attachments/assets/300f10ff-73e0-4e64-8c05-76c0a0522e37" />
+
+IM16: Logged in as Admin User Account with AWS Management Console
+
+### Part 6: Enabling MFA on Admin Account
+
+I also wanted to enable MFA on the Admin Account as well. I did the exact same process as I did with the Root account, and MFA was successfully enabled on the admin account (IM17). 
+
+<img width="1595" height="365" alt="Screenshot 2026-06-01 112847" src="https://github.com/user-attachments/assets/2ece8df1-24e7-44b4-8dca-9f5039dcf19f" />
+
+IM17: MFA Enabled on Admin Account
 
 
 
